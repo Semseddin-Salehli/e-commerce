@@ -29,6 +29,18 @@ body {
     @apply underline-offset-[6px] decoration-1
   }
 
+  .side-bar-tag {
+    @apply relative underline-offset-[6px] decoration-1 w-full flex justify-between items-center
+  }
+
+  .slide-btn {
+    @apply bg-gray-400 rounded-full w-3 h-3 cursor-pointer
+  }
+
+  .active-slide-btn {
+    @apply bg-baseRed border-[1.7px]
+  }
+
 }
 
 @layer components {
@@ -37,7 +49,7 @@ body {
     position: relative;
   }
 
-  .header-tag::after {
+  .side-bar-tag::after, .header-tag::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -50,7 +62,12 @@ body {
     transition: transform 0.3s ease-in-out;
   }
 
-  .header-tag:hover::after {
+  .header-tag:hover::after, .side-bar-tag:hover::after {
     transform: scaleX(1);
   }
+
+  .line-horizontal {
+    width: calc(100% + 96px);
+  }
+
 }
