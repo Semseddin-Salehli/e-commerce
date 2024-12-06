@@ -1,3 +1,4 @@
+import ItemCard from "./ui/item-card";
 import SliderButton from "./ui/slider-button";
 import Title from "./ui/title";
 
@@ -41,7 +42,12 @@ export default function FlashSales () {
             </div>
             
             
-            <div></div>
+            <div>
+                <ItemCard />
+            </div>
+
+
+
             <div></div>
         </div>
     )
